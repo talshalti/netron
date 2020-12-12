@@ -21,6 +21,10 @@ export function activate(context: vscode.ExtensionContext) {
 			);
 			let html = fs.readFileSync(indexPath.fsPath, 'utf8');
 			let lol = vscode.window.activeTextEditor?.document.fileName;
+			if (resource !== undefined)
+			{
+				lol = resource.fsPath;
+			}
 			let modelData = Buffer.from(fs.readFileSync(lol!, 'utf8'), "binary").toString("base64");
 			html = html.replace('%MODEL%', modelData);
 			panel. webview.html = html;

@@ -20,10 +20,50 @@
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "netron.open",
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "netron.open",
+					"group": "YourGroup@1",
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "netron.open",
+					"group": "navigation",
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+				}
+			],
+			"editor/title/context": [
+				{
+					"command": "netron.open",
+					"group": "YourGroup@1",
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "netron.open",
+					"group": "YourGroup@1",
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "netron.open",
-				"title": "Open current file in Netron"
+				"title": "Open in Netron",
+				"icon": {
+					"light": "./netron.svg",
+					"dark": "./netron-black.svg"
+				}
 			}
 		]
 	},
@@ -39,18 +79,18 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.51.0",
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.0.0",
-		"@types/node": "^12.11.7",
-		"eslint": "^7.9.0",
+		"@types/node": "^12.19.9",
+		"@types/vscode": "^1.51.0",
 		"@typescript-eslint/eslint-plugin": "^4.1.1",
 		"@typescript-eslint/parser": "^4.1.1",
+		"eslint": "^7.9.0",
 		"glob": "^7.1.6",
 		"mocha": "^8.1.3",
+		"ts-loader": "^8.0.3",
 		"typescript": "^4.0.2",
 		"vscode-test": "^1.4.0",
-		"ts-loader": "^8.0.3",
 		"webpack": "^4.44.1",
 		"webpack-cli": "^3.3.12"
 	}
