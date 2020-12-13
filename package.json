@@ -61,8 +61,8 @@
 				"command": "netron.open",
 				"title": "Open in Netron",
 				"icon": {
-					"light": "./netron.svg",
-					"dark": "./netron-black.svg"
+					"light": "./netron-black.svg",
+					"dark": "./netron.svg"
 				}
 			}
 		]
