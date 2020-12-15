@@ -24,35 +24,35 @@
 			"commandPalette": [
 				{
 					"command": "netron.open",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx || || resourceExtname == pbtxt"
 				}
 			],
 			"editor/context": [
 				{
 					"command": "netron.open",
 					"group": "YourGroup@1",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx || || resourceExtname == pbtxt"
 				}
 			],
 			"editor/title": [
 				{
 					"command": "netron.open",
 					"group": "navigation",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx || || resourceExtname == pbtxt"
 				}
 			],
 			"editor/title/context": [
 				{
 					"command": "netron.open",
 					"group": "YourGroup@1",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx || || resourceExtname == pbtxt"
 				}
 			],
 			"explorer/context": [
 				{
 					"command": "netron.open",
 					"group": "YourGroup@1",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == json || resourceExtname == onnx || || resourceExtname == pbtxt"
 				}
 			]
 		},
