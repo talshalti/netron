@@ -360,7 +360,7 @@ async function docReady(fn)
 {
     while (document.body.className != "welcome")
     {
-        await sleep(10); 
+        await sleep(10);
     };
     console.log("HI");
     fn();
@@ -374,10 +374,15 @@ h._url = function(file) {
     return 'https://netron.app/' + file;
 }
 h.error = function(message, detail) {
+    const vscode = acquireVsCodeApi();
+    vscode.postMessage({
+                        command: 'alert',
+                        text: message + "\n" + detail
+                    })
     console.log(message, detail)
 }
 const arrayBuffer = Uint8Array.from(window.atob(dataBase64), c => c.charCodeAt(0));
-const file1 = new File([arrayBuffer], "graph.json", {type: 'application/json'});
+const file1 = new File([arrayBuffer], "graph%EXTNAME%", {type: ''});
 h._open(file1, [file1]);
 });
 

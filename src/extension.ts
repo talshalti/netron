@@ -26,8 +26,20 @@ export function activate(context: vscode.ExtensionContext) {
 				lol = resource.fsPath;
 			}
 			let modelData = Buffer.from(fs.readFileSync(lol!, 'utf8'), "binary").toString("base64");
+			html = html.replace('%EXTNAME%', path.extname(lol!));
 			html = html.replace('%MODEL%', modelData);
 			panel. webview.html = html;
+			panel.webview.onDidReceiveMessage(
+				message => {
+				  switch (message.command) {
+					case 'alert':
+					  vscode.window.showErrorMessage(message.text);
+					  return;
+				  }
+				},
+				undefined,
+				context.subscriptions
+			  );
 		})
 	);
 }
