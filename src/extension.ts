@@ -7,15 +7,6 @@ import * as fs from 'fs';
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.commands.registerCommand('netron.open', (resource: vscode.Uri) => {
-            const panel = vscode.window.createWebviewPanel(
-                'netron',
-                'Netron',
-                vscode.ViewColumn.One,
-                {
-                    enableScripts: true,
-                    retainContextWhenHidden: true
-                }
-            );
 			const indexPath = vscode.Uri.file(
 				path.join(context.extensionPath, 'webview', 'index.html')
 			);
@@ -25,8 +16,18 @@ export function activate(context: vscode.ExtensionContext) {
 			{
 				lol = resource.fsPath;
 			}
+			let baseName = path.basename(lol!);
+            const panel = vscode.window.createWebviewPanel(
+                'netron',
+                baseName + "[Netron]",
+                vscode.ViewColumn.One,
+                {
+                    enableScripts: true,
+                    retainContextWhenHidden: true
+                }
+			);
 			let modelData = Buffer.from(fs.readFileSync(lol!, 'utf8'), "binary").toString("base64");
-			html = html.replace('%EXTNAME%', path.extname(lol!));
+			html = html.replace('%GRAPHNAME%', baseName);
 			html = html.replace('%MODEL%', modelData);
 			panel. webview.html = html;
 			panel.webview.onDidReceiveMessage(

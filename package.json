@@ -24,35 +24,35 @@
 			"commandPalette": [
 				{
 					"command": "netron.open",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .json || resourceExtname == .onnx || resourceExtname == .pbtxt"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .cntk || resourceExtname == .meta || resourceExtname == .index || resourceExtname == .cfg || resourceExtname == .pkl || resourceExtname == .pb || resourceExtname == .pt || resourceExtname == .zip || resourceExtname == .tmfile || resourceExtname == .tflite || resourceExtname == .keras || resourceExtname == .armnn || resourceExtname == .mlmodel || resourceExtname == .caffemodel|| resourceExtname == .rknn || resourceExtname == .json || resourceExtname == .param || resourceExtname == .uff || resourceExtname == .onnx || resourceExtname == .h5 || resourceExtname == .npz || resourceExtname == .nn || resourceExtname == .ckpt || resourceExtname == .pth || resourceExtname == .ms || resourceExtname == .bigdl || resourceExtname == .model || resourceExtname == .tnnproto || resourceExtname == .xml || resourceExtname == .pbtxt || resourceExtname == .prototxt || resourceExtname == .t7 || resourceExtname == .mnn"
 				}
 			],
 			"editor/context": [
 				{
 					"command": "netron.open",
 					"group": "YourGroup@1",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .json || resourceExtname == .onnx || resourceExtname == .pbtxt"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .cntk || resourceExtname == .meta || resourceExtname == .index || resourceExtname == .cfg || resourceExtname == .pkl || resourceExtname == .pb || resourceExtname == .pt || resourceExtname == .zip || resourceExtname == .tmfile || resourceExtname == .tflite || resourceExtname == .keras || resourceExtname == .armnn || resourceExtname == .mlmodel || resourceExtname == .caffemodel|| resourceExtname == .rknn || resourceExtname == .json || resourceExtname == .param || resourceExtname == .uff || resourceExtname == .onnx || resourceExtname == .h5 || resourceExtname == .npz || resourceExtname == .nn || resourceExtname == .ckpt || resourceExtname == .pth || resourceExtname == .ms || resourceExtname == .bigdl || resourceExtname == .model || resourceExtname == .tnnproto || resourceExtname == .xml || resourceExtname == .pbtxt || resourceExtname == .prototxt || resourceExtname == .t7 || resourceExtname == .mnn"
 				}
 			],
 			"editor/title": [
 				{
 					"command": "netron.open",
 					"group": "navigation",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .json || resourceExtname == .onnx || resourceExtname == .pbtxt"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .cntk || resourceExtname == .meta || resourceExtname == .index || resourceExtname == .cfg || resourceExtname == .pkl || resourceExtname == .pb || resourceExtname == .pt || resourceExtname == .zip || resourceExtname == .tmfile || resourceExtname == .tflite || resourceExtname == .keras || resourceExtname == .armnn || resourceExtname == .mlmodel || resourceExtname == .caffemodel|| resourceExtname == .rknn || resourceExtname == .json || resourceExtname == .param || resourceExtname == .uff || resourceExtname == .onnx || resourceExtname == .h5 || resourceExtname == .npz || resourceExtname == .nn || resourceExtname == .ckpt || resourceExtname == .pth || resourceExtname == .ms || resourceExtname == .bigdl || resourceExtname == .model || resourceExtname == .tnnproto || resourceExtname == .xml || resourceExtname == .pbtxt || resourceExtname == .prototxt || resourceExtname == .t7 || resourceExtname == .mnn"
 				}
 			],
 			"editor/title/context": [
 				{
 					"command": "netron.open",
 					"group": "YourGroup@1",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .json || resourceExtname == .onnx || resourceExtname == .pbtxt"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .cntk || resourceExtname == .meta || resourceExtname == .index || resourceExtname == .cfg || resourceExtname == .pkl || resourceExtname == .pb || resourceExtname == .pt || resourceExtname == .zip || resourceExtname == .tmfile || resourceExtname == .tflite || resourceExtname == .keras || resourceExtname == .armnn || resourceExtname == .mlmodel || resourceExtname == .caffemodel|| resourceExtname == .rknn || resourceExtname == .json || resourceExtname == .param || resourceExtname == .uff || resourceExtname == .onnx || resourceExtname == .h5 || resourceExtname == .npz || resourceExtname == .nn || resourceExtname == .ckpt || resourceExtname == .pth || resourceExtname == .ms || resourceExtname == .bigdl || resourceExtname == .model || resourceExtname == .tnnproto || resourceExtname == .xml || resourceExtname == .pbtxt || resourceExtname == .prototxt || resourceExtname == .t7 || resourceExtname == .mnn"
 				}
 			],
 			"explorer/context": [
 				{
 					"command": "netron.open",
 					"group": "YourGroup@1",
-					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .json || resourceExtname == .onnx || resourceExtname == .pbtxt"
+					"when": "editorLangId == json || editorLangId == jsonc || resourceLangId == json || resourceLangId == jsonc || resourceExtname == .cntk || resourceExtname == .meta || resourceExtname == .index || resourceExtname == .cfg || resourceExtname == .pkl || resourceExtname == .pb || resourceExtname == .pt || resourceExtname == .zip || resourceExtname == .tmfile || resourceExtname == .tflite || resourceExtname == .keras || resourceExtname == .armnn || resourceExtname == .mlmodel || resourceExtname == .caffemodel|| resourceExtname == .rknn || resourceExtname == .json || resourceExtname == .param || resourceExtname == .uff || resourceExtname == .onnx || resourceExtname == .h5 || resourceExtname == .npz || resourceExtname == .nn || resourceExtname == .ckpt || resourceExtname == .pth || resourceExtname == .ms || resourceExtname == .bigdl || resourceExtname == .model || resourceExtname == .tnnproto || resourceExtname == .xml || resourceExtname == .pbtxt || resourceExtname == .prototxt || resourceExtname == .t7 || resourceExtname == .mnn"
 				}
 			]
 		},

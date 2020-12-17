@@ -352,6 +352,7 @@ body { overflow: hidden; margin: 0; width: 100vw; height: 100vh; font-family: -a
     <div style="font-weight: bold; color: rgba(0, 0, 0, 0.01); user-select: none;">.</div>
 </div>
 <script>
+const vscode = acquireVsCodeApi();
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -360,9 +361,8 @@ async function docReady(fn)
 {
     while (document.body.className != "welcome")
     {
-        await sleep(10);
+        await sleep(1);
     };
-    console.log("HI");
     fn();
 }
 
@@ -374,7 +374,6 @@ h._url = function(file) {
     return 'https://netron.app/' + file;
 }
 h.error = function(message, detail) {
-    const vscode = acquireVsCodeApi();
     vscode.postMessage({
                         command: 'alert',
                         text: message + "\n" + detail
@@ -382,7 +381,7 @@ h.error = function(message, detail) {
     console.log(message, detail)
 }
 const arrayBuffer = Uint8Array.from(window.atob(dataBase64), c => c.charCodeAt(0));
-const file1 = new File([arrayBuffer], "graph%EXTNAME%", {type: ''});
+const file1 = new File([arrayBuffer], "%GRAPHNAME%", {type: ''});
 h._open(file1, [file1]);
 });
 
