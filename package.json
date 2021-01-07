@@ -2,7 +2,7 @@
 	"name": "netron",
 	"displayName": "netron",
 	"description": "",
-	"version": "0.8.0",
+	"version": "0.9.0",
 	"publisher": "talshalti",
 	"engines": {
 		"vscode": "^1.51.0"
