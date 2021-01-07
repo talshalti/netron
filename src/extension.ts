@@ -36,6 +36,12 @@ export function activate(context: vscode.ExtensionContext) {
 					case 'alert':
 					  vscode.window.showErrorMessage(message.text);
 					  return;
+					case 'confirm':
+						vscode.window.showInformationMessage(message.text, "Yes", "No").then(selection => panel.webview.postMessage({
+							command: "confirm",
+							value: selection === "Yes"
+						}));
+						return;
 				  }
 				},
 				undefined,

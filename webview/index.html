@@ -372,18 +372,41 @@ var dataBase64 = '%MODEL%';
 var h = window.__view__._host;
 h._url = function(file) {
     return 'https://netron.app/' + file;
-}
+};
 h.error = function(message, detail) {
     vscode.postMessage({
                         command: 'alert',
                         text: message + "\n" + detail
                     })
     console.log(message, detail)
-}
+};
+
+
+window.addEventListener('message', event => {
+
+            const message = event.data; // The JSON data our extension sent
+
+            switch (message.command) {
+                case 'confirm':
+                    userResponse = message.value;
+                    break;
+            }
+        });
+
+
+h.confirm = async function(message, detail) {
+    console.log(message, detail)
+    vscode.postMessage({
+                        command: 'confirm',
+                        text: message + "\n" + detail
+                    });
+    return true;
+};
 const arrayBuffer = Uint8Array.from(window.atob(dataBase64), c => c.charCodeAt(0));
 const file1 = new File([arrayBuffer], "%GRAPHNAME%", {type: ''});
 h._open(file1, [file1]);
 });
+
 
 </script>
 </body>
